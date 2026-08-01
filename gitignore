@@ -1,0 +1,36 @@
+# Build artifacts
+build/
+*.o
+*.obj
+
+# Static / dynamic libraries
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.lib
+
+# Executables
+*.exe
+*.out
+cnda
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Compiler / debug
+*.dSYM/
+*.stackdump
+core
+
+# Local env
+.env
