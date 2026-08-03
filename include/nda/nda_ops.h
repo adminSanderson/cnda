@@ -18,6 +18,7 @@ NDArray* nda_div(const NDArray* a, const NDArray* b);
 
 NDArray* nda_matmul(const NDArray* a, const NDArray* b);
 NDArray* nda_transpose(const NDArray* arr);
+double nda_determinant(const NDArray* arr);
 
 // =====================
 // SCALAR OPS

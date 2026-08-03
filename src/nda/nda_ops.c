@@ -1,4 +1,5 @@
 #include "nda/nda_ops.h"
+#include <math.h>
 
 typedef enum {
     NDA_OP_ADD,
@@ -226,4 +227,47 @@ static NDArray* nda_broadcast_op(const NDArray* a, const NDArray* b, NDArrayOp o
     }
 
     return result;
+}
+
+double nda_determinant(const NDArray* arr) {
+    if (!arr || arr->ndim != 2 || arr->shape[0] != arr->shape[1]) return NAN;
+
+    int n = (int)arr->shape[0];
+
+    switch (n) {
+        case 1:
+            return arr->data[0];
+        case 2:
+            return arr->data[0] * arr->data[3] - arr->data[1] * arr->data[2];
+        case 3: {
+            double a = arr->data[0], b = arr->data[1], c = arr->data[2];
+            double d = arr->data[3], e = arr->data[4], f = arr->data[5];
+            double g = arr->data[6], h = arr->data[7], i = arr->data[8];
+            return a * (e*i - f*h) - b * (d*i - f*g) + c * (d*h - e*g);
+        }
+        default: {
+            NDArray* L = nda_eye(n);
+            NDArray* U = nda_eye(n);
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    double sum = 0;
+                    if (i <= j) {
+                        for (int k = 0; k < i; k++) sum += L->data[i*n+k] * U->data[k*n+j];
+                        U->data[i*n+j] = arr->data[i*n+j] - sum;
+                    } else {
+                        for (int k = 0; k < j; k++) sum += L->data[i*n+k] * U->data[k*n+j];
+                        L->data[i*n+j] = (arr->data[i*n+j] - sum) / U->data[j*n+j];
+                    }
+                }
+            }
+
+            double ans = 1;
+            for (int i = 0; i < n; i++) ans *= L->data[i*n+i] * U->data[i*n+i];
+
+            nda_free(L);
+            nda_free(U);
+            return ans;
+        }
+    }
 }
