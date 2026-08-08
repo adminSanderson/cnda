@@ -18,4 +18,4 @@ matrix operations, and common neural-network activation functions.
  
 - **Source code:** https://github.com/adminSanderson/cnda
 - **Bug reports:** https://github.com/adminSanderson/cnda/issues
-- **License:** MIT
+- **License:** BSD 3-Clause
