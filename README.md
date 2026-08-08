@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/github/stars/adminSanderson/cnda.svg?style=social" alt="GitHub stars">
   </a>
 </p>
+
 **cnda** (C N-Dimensional Array) is a small, dependency-free linear algebra
 library for C. It provides an `NDArray` type with broadcastable arithmetic,
 matrix operations, and common neural-network activation functions.
