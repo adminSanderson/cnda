@@ -1,7 +1,7 @@
 <p align="left">
   <img src="https://img.shields.io/badge/language-C-00599C.svg?style=flat" alt="Language: C">
   <a href="https://github.com/adminSanderson/cnda/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT">
+    <img src="https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat" alt="License: BSD 3-Clause">
   </a>
   <img src="https://img.shields.io/badge/build-make-8A2BE2.svg?style=flat" alt="Build: Make">
   <a href="https://github.com/adminSanderson/cnda/issues">
