@@ -9,7 +9,10 @@ build:
   os: ubuntu-24.04
   tools:
     python: "3.13"
-    doxygen: "1.16.1"
+  
+  # Install Doxygen via apt
+  apt_packages:
+    - doxygen
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
