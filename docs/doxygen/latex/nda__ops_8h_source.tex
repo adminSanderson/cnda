@@ -1,0 +1,57 @@
+\doxysection{nda\+\_\+ops.\+h}
+\hypertarget{nda__ops_8h_source}{}\label{nda__ops_8h_source}\index{include/nda/nda\_ops.h@{include/nda/nda\_ops.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NDA\_OPS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NDA\_OPS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}nda/nda\_core.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ BROADCASTABLE\ ARITHMETIC}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_add(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ b);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00026\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_sub(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ b);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_mul(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ b);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00048\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_div(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ b);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ LINEAR\ ALGEBRA}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00061\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_matmul(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ b);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_transpose(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{double}\ nda\_determinant(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ SCALAR\ OPS}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00093\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_scalar\_add(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr,\ \textcolor{keywordtype}{double}\ scalar);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00102\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_scalar\_mul(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr,\ \textcolor{keywordtype}{double}\ scalar);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ FUNCTIONAL\ /\ REDUCTIONS}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00118\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_map(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr,\ \textcolor{keywordtype}{double}\ (*fn)(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ NDArray*\ nda\_sum\_axis(const\ NDArray*\ arr,\ int\ axis);}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ double\ \ \ nda\_sum\_all(const\ NDArray*\ arr);}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ IO}}
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00136\ \textcolor{keywordtype}{void}\ nda\_print(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr,\ \textcolor{keywordtype}{int}\ precision);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NDA\_OPS\_H}}
+
+\end{DoxyCode}
