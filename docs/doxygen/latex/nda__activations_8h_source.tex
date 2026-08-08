@@ -1,0 +1,46 @@
+\doxysection{nda\+\_\+activations.\+h}
+\hypertarget{nda__activations_8h_source}{}\label{nda__activations_8h_source}\index{include/nda/nda\_activations.h@{include/nda/nda\_activations.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NDA\_ACTIVATIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NDA\_ACTIVATIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}nda/nda\_core.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ SCALAR\ ACTIVATIONS}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{double}\ sigmoid(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{double}\ sigmoid\_deriv\_from\_output(\textcolor{keywordtype}{double}\ y);\ \textcolor{comment}{//\ y\ =\ sigmoid(x)}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{double}\ relu(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{double}\ relu\_deriv(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{double}\ tanh\_activation(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{double}\ tanh\_deriv\_from\_output(\textcolor{keywordtype}{double}\ y);\ \textcolor{comment}{//\ y\ =\ tanh(x)}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ NDARRAY\ WRAPPERS}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_sigmoid(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_sigmoid\_derivative(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ activated\_output);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_relu(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_relu\_derivative(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_tanh(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_tanh\_derivative(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ activated\_output);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NDA\_ACTIVATIONS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,50 @@
+\doxysection{nda\+\_\+core.\+h}
+\hypertarget{nda__core_8h_source}{}\label{nda__core_8h_source}\index{include/nda/nda\_core.h@{include/nda/nda\_core.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NDA\_CORE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NDA\_CORE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ NDARRAY\ STRUCT}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ ndim;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{size\_t}*\ shape;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{size\_t}*\ strides;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}*\ data;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ owns\_data;}
+\DoxyCodeLine{00018\ \}\ \doxymbox{\hyperlink{structNDArray}{NDArray}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ CORE\ FUNCTIONS}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ =====================}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00034\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_create(\textcolor{keywordtype}{int}\ ndim,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}*\ shape);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ nda\_free(\doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{size\_t}\ nda\_total\_size(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ nda\_same\_shape(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ a,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ b);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_fill(\doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr,\ \textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_zeros(\textcolor{keywordtype}{int}\ ndim,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}*\ shape);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_ones(\textcolor{keywordtype}{int}\ ndim,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}*\ shape);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00100\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_copy(\doxymbox{\hyperlink{structNDArray}{NDArray}}*\ arr);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \doxymbox{\hyperlink{structNDArray}{NDArray}}*\ nda\_eye(\textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NDA\_CORE\_H}}
+
+\end{DoxyCode}

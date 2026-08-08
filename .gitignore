@@ -34,3 +34,18 @@ core
 
 # Local env
 .env
+
+# Documentation build artifacts
+docs/_build/
+docs/.doctrees/
+docs/__pycache__/
+
+# Doxygen generated files (regenerated on each build)
+docs/doxygen/xml/
+docs/doxygen/html/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
